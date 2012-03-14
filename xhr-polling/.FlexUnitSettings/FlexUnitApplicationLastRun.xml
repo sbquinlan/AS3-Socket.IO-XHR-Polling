@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="xhr-polling">
+<testsuite name="flexUnitTests:PacketFactoryTests" type="testsuiteclass"/>
+</testsuite>
+<portNumber value="8765" />
+</testrun>

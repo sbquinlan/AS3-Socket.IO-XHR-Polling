@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="io.IO"/>
+    <classEntry path="io.Options"/>
+    <classEntry path="io.Socket"/>
+    <classEntry path="io.Transport"/>
+    <classEntry path="io.event.EmitterEvent"/>
+    <classEntry path="io.packet.AckPacket"/>
+    <classEntry path="io.packet.ConnectPacket"/>
+    <classEntry path="io.packet.DisconnectPacket"/>
+    <classEntry path="io.packet.ErrorPacket"/>
+    <classEntry path="io.packet.EventPacket"/>
+    <classEntry path="io.packet.HeartbeatPacket"/>
+    <classEntry path="io.packet.JSONPacket"/>
+    <classEntry path="io.packet.MessagePacket"/>
+    <classEntry path="io.packet.Packet"/>
+    <classEntry path="io.packet.PacketFactory"/>
+    <classEntry path="io.request.HTTPRequest"/>
+    <classEntry path="io.request.IHTTPRequestDelegate"/>
+    <classEntry path="io.request.IPollingRequestDelegate"/>
+    <classEntry path="io.request.IPostRequestDelegate"/>
+    <classEntry path="io.request.PollingRequest"/>
+    <classEntry path="io.request.PostRequest"/>
+    <classEntry path="io.utils.IOUtils"/>
+    <classEntry path="io.utils.URI"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

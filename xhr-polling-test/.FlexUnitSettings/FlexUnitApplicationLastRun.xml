@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="xhr-polling-test">
+<testsuite name="io.packet.test:JSONPacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:ConnectPacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:HeartbeatPacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:PayloadTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:MessagePacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:EventPacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:DisconnectPacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:ErrorPacketTest" type="testsuiteclass"/>
+<testsuite name="io.packet.test:AckPacketTest" type="testsuiteclass"/>
+</testsuite>
+<portNumber value="8765" />
+</testrun>
