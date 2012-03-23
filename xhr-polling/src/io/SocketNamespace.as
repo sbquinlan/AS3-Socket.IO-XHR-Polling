@@ -122,8 +122,8 @@ package io
 					}
 					break;
 				case ErrorPacket.TYPE:
-					if ((packet as ErrorPacket).advice) return socket.onError(packet);
-					break;
+					if ((packet as ErrorPacket).advice) 
+						return socket.onError(packet as ErrorPacket);
 			}
 			
 			$emit.apply(this, packet.getParams());

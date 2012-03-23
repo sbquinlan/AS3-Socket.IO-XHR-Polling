@@ -15,6 +15,7 @@ package io
 	import io.event.EventEmitter;
 	import io.packet.ConnectPacket;
 	import io.packet.DisconnectPacket;
+	import io.packet.ErrorPacket;
 	import io.packet.Packet;
 	import io.utils.IOUtils;
 
@@ -117,9 +118,8 @@ package io
 		}
 		
 		public function packet(data:Packet):void {
-			if (connected && !doBuffer) {
-				// transport.payload(data);
-			} else buffer.push(data);
+			if (connected && !doBuffer) transport.packet(data);
+			else buffer.push(data);
 		}
 		
 		protected function publish(... arguments):void {
@@ -276,21 +276,22 @@ package io
 		
 		// pass packet up to namespace
 		protected function onPacket(packet:Packet):void {
-			if (packet.type == ConnectPacket.TYPE && packet.endpoint == '') {
+			if (packet.type == ConnectPacket.TYPE && packet.endpoint == '')
 				onConnect();
-			}
 			
 			emit(Socket.PACKET, packet);
 		}
 		
 		// namespace needs thi
 		public function onError(err:Object):void {
-			if (err && err.advice && options.reconnect && err.advice == RECONNECT && connected) {
+			if (err is ErrorPacket && err.advice && options.reconnect && 
+				err.advice == RECONNECT && connected)
+			{
 				disconnect();
 				reconnect();
 			}
 			
-			publish(ERROR, err && err.reason ? err.reason : err);
+			publish(ERROR, (err is ErrorPacket ? err.reason : err));
 		}
 		
 	}

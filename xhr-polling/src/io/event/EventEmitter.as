@@ -18,7 +18,7 @@ package io.event
 			if (!callbacks[cb])
 				callbacks[cb] = function(e:EmitterEvent):void { cb.apply(null, e.arguments); };
 			
-			this.addEventListener(type, callbacks[cb], false, 0, true);
+			addEventListener(type, callbacks[cb], false, 0, true);
 		}
 		
 		public override function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {
@@ -36,7 +36,7 @@ package io.event
 		}
 		
 		public function emit(name:String, ... arguments):void {
-			this.dispatchEvent( new EmitterEvent(name, arguments) );
+			dispatchEvent( new EmitterEvent(name, arguments) );
 		}
 	}
 }
