@@ -41,7 +41,7 @@ production-ready and probably buggy.
 
 (The MIT License)
 
-Copyright (c) 2012 Sean Quinlan &lt;squinlanesq@gmail.com&gt;
+Copyright (c) 2012 Sean Quinlan
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
